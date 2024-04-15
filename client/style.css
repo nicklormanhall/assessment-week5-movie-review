@@ -36,20 +36,20 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 200px;
+  height: 250px;
   width: auto;
   position: absolute;
   top: 100px;
   bottom: auto;
-  left: 10%;
-  right: 10%;
+  left: 20%;
+  right: 20%;
   overflow: scroll;
   border: 1px solid white;
 }
 
 #thumb-container img {
-  width: 110px;
-  height: 75px;
+  width: 200px;
+  height: 250px;
   padding: 1px;
   cursor: pointer;
   flex-shrink: 0;
