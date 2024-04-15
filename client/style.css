@@ -1,0 +1,57 @@
+* {
+  font-family: "Arial Narrow", sans-serif;
+  color: white;
+}
+body {
+  background: linear-gradient(to right, black, rgb(80, 71, 71), black);
+  color: white;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  padding: 10px 10px;
+  gap: 100px;
+  align-content: center;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  align-items: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(149, 139, 134);
+}
+
+#thumb-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+  width: auto;
+  position: absolute;
+  top: 100px;
+  bottom: auto;
+  left: 10%;
+  right: 10%;
+  overflow: scroll;
+  border: 1px solid white;
+}
+
+#thumb-container img {
+  width: 110px;
+  height: 75px;
+  padding: 1px;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-items: center;
+}
