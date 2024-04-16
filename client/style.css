@@ -10,10 +10,11 @@ body {
 header {
   position: fixed;
   display: flex;
-  padding: 10px 10px;
+  padding: 5px 5px;
   gap: 100px;
   align-content: center;
   z-index: 1;
+  white-space: nowrap;
 }
 
 nav {
@@ -32,14 +33,17 @@ nav a:hover {
   color: rgb(149, 139, 134);
 }
 
+#movie-container {
+}
+
 #thumb-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 250px;
+  height: 150px;
   width: auto;
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 80px;
   bottom: auto;
   left: 20%;
   right: 20%;
@@ -48,10 +52,74 @@ nav a:hover {
 }
 
 #thumb-container img {
-  width: 200px;
-  height: 250px;
+  width: 100px;
+  height: 150px;
   padding: 1px;
   cursor: pointer;
   flex-shrink: 0;
   align-items: center;
+}
+
+#main-film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 330px; /* change with the #image-container img width */
+  position: fixed;
+  top: 260px;
+  bottom: auto;
+  /* left: 40%;
+  right: 40%; */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+#title-container {
+  text-align: left;
+  /* margin-bottom: 10px; */
+  margin-top: 5px;
+}
+
+#movie-title {
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+
+#image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#image-container img {
+  width: 120%; /* change with the #main-film width */
+  padding: 10px;
+  cursor: pointer;
+}
+
+#genre-score-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: grey;
+}
+
+#genre,
+#score {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: bolder;
+  font-size: larger;
 }
