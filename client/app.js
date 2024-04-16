@@ -1,7 +1,7 @@
 // console.log("Image Gallery");
 const thumbContainer = document.getElementById("thumb-container");
 const displayImage = document.getElementById("screen-image");
-
+const movieWrapper = document.getElementById("movieWrapper");
 const images = [
   {
     url: "https://upload.wikimedia.org/wikipedia/en/f/f5/Damsel_2024_poster2.jpg",
@@ -24,7 +24,14 @@ const images = [
     alt: "",
   },
 ];
+async function getMovie() {
+  const response = await fetch("http://localhost:8080/movies");
+  const movies = await response.json();
+  //  movieWrapper.textContent = "";
+  console.log(movies);
+}
 
+getMovie();
 function preloadImage(url) {
   const link = document.createElement("link");
   link.rel = "preload";
@@ -68,6 +75,12 @@ function createMainImage(image) {
   mainImg.src = image.url;
   mainImg.alt = image.alt;
   displayImage.appendChild(mainImg);
+}
+
+async function deleteMovie(movieId) {
+  const response = await fetch(`http://localhost:8080/moviedelete/${movieId}`, {
+    method: "DELETE",
+  });
 }
 createThumbnail();
 createMainImage(images[0]); //sets to first image in the array

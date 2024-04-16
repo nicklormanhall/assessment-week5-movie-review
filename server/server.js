@@ -17,8 +17,15 @@ app.get("/", function (request, response) {
 
 app.get("/movies", function (request, response) {
   // here we use .all instead of .run because we aren't INSERTing, but selecting. So we want to see ALL the results
-  const movies = db.prepare("SELECT * FROM games").all();
+  const movies = db.prepare("SELECT * FROM movies").all();
   response.json(movies);
+});
+
+app.delete("/moviedelete/:id", function (request, response) {
+  const movieId = request.params.id;
+  const deleteMovie = db.prepare("DELETE FROM movies WHERE id = ?");
+  deleteMovie.run(movieId);
+  response.json("");
 });
 
 //starting out server
