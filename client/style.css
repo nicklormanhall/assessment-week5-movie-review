@@ -98,10 +98,12 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 #image-container img {
   width: 105%; /* change with the #main-film width */
+  height: 380px;
   padding: 10px;
   cursor: pointer;
 }
@@ -111,6 +113,7 @@ nav a:hover {
   justify-content: space-between;
   width: 100%;
   background-color: grey;
+  margin-bottom: 10px;
 }
 
 #genre,

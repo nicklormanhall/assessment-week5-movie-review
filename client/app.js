@@ -1,6 +1,6 @@
 // console.log("Image Gallery");
 const thumbContainer = document.getElementById("thumb-container");
-const displayImage = document.getElementById("screen-image");
+const displayImage = document.getElementById("image-container");
 const movieWrapper = document.getElementById("movieWrapper");
 const images = [
   {
@@ -17,6 +17,10 @@ const images = [
   },
   {
     url: "https://upload.wikimedia.org/wikipedia/en/b/be/Godzilla_x_kong_the_new_empire_poster.jpg",
+    alt: "",
+  },
+  {
+    url: "https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_(2024)_poster.jpg",
     alt: "",
   },
   {
