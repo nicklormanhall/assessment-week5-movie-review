@@ -66,7 +66,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   height: auto;
-  width: 330px; /* change with the #image-container img width */
+  width: 290px; /* change with the #image-container img width */
   position: fixed;
   top: 260px;
   bottom: auto;
@@ -101,7 +101,7 @@ nav a:hover {
 }
 
 #image-container img {
-  width: 120%; /* change with the #main-film width */
+  width: 105%; /* change with the #main-film width */
   padding: 10px;
   cursor: pointer;
 }
