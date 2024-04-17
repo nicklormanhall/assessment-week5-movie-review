@@ -55,7 +55,8 @@ function createThumbnail(movies) {
   movies.forEach(function (movie) {
     const img = document.createElement("img");
     img.src = movie.imageurl;
-    img.alt = movie.name;
+    img.alt = `Poster for the movie ${movie.name}`;
+    img.ariaLabel = `Thumbnail of the movie poster for ${movie.name}. Click to bring up review below`;
     img.tabIndex = 0; // Add tabindex for accessibility
     thumbContainer.appendChild(img);
     img.addEventListener("click", function () {
@@ -83,7 +84,8 @@ function createMainImage(movie) {
   displayImage.innerHTML = "";
   const mainImg = document.createElement("img");
   mainImg.src = movie.imageurl;
-  mainImg.alt = movie.name;
+  mainImg.alt = `Poster for the movie ${movie.name}`;
+  mainImg.ariaLabel = `Poster for the movie ${movie.name}`;
   displayImage.appendChild(mainImg);
 
   const movieTitle = document.getElementById("movie-title");
