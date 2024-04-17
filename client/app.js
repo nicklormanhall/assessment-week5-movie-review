@@ -3,6 +3,8 @@ const thumbContainer = document.getElementById("thumb-container");
 const displayImage = document.getElementById("image-container");
 const movieWrapper = document.getElementById("movieWrapper");
 const scoreElement = document.getElementById("score"); //added for score color change
+const sortbyRating = document.getElementById("sortbyRating");
+const resetOrder = document.getElementById("resetOrder");
 
 const images = [
   {
@@ -30,6 +32,7 @@ const images = [
     alt: "",
   },
 ];
+
 async function getMovie() {
   const response = await fetch("http://localhost:8080/movies");
   const movies = await response.json();
@@ -42,6 +45,17 @@ async function getMovie() {
 }
 
 getMovie();
+
+async function getMovieRating() {
+  const response = await fetch("http://localhost:8080/moviesbyrating");
+  const movies = await response.json();
+  console.log(movies);
+  createThumbnail(movies);
+
+  if (movies.length > 0) {
+    createMainImage(movies[0]);
+  }
+}
 
 function preloadImage(url) {
   const link = document.createElement("link");
@@ -100,10 +114,12 @@ function createMainImage(movie) {
   const movieTitle = document.getElementById("movie-title");
   const genre = document.getElementById("genre");
   const score = document.getElementById("score");
+  const summary = document.getElementById("summary");
 
   movieTitle.textContent = movie.name;
   genre.textContent = movie.genre;
   score.textContent = movie.rating;
+  summary.textContent = movie.summary;
   // changes the colour of the score
   setColor();
 }
@@ -137,3 +153,11 @@ function setColor() {
 
   scoreElement.style.color = color;
 }
+
+sortbyRating.addEventListener("click", function () {
+  getMovieRating();
+});
+
+resetOrder.addEventListener("click", function () {
+  getMovie();
+});
