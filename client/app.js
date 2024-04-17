@@ -33,9 +33,15 @@ async function getMovie() {
   const movies = await response.json();
   //  movieWrapper.textContent = "";
   console.log(movies);
+  createThumbnail(movies);
+
+  if (movies.length > 0) {
+    createMainImage(movies[0]);
+  }
 }
 
 getMovie();
+
 function preloadImage(url) {
   const link = document.createElement("link");
   link.rel = "preload";
@@ -45,15 +51,15 @@ function preloadImage(url) {
 }
 
 //Creates Thumbnail
-function createThumbnail() {
-  images.forEach(function (image) {
+function createThumbnail(movies) {
+  movies.forEach(function (movie) {
     const img = document.createElement("img");
-    img.src = image.url;
-    img.alt = image.alt;
+    img.src = movie.imageurl;
+    img.alt = movie.name;
     img.tabIndex = 0; // Add tabindex for accessibility
     thumbContainer.appendChild(img);
     img.addEventListener("click", function () {
-      createMainImage(image);
+      createMainImage(movie);
       img.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -64,21 +70,29 @@ function createThumbnail() {
     img.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         // Check if the pressed key is the return key
-        createMainImage(image);
+        createMainImage(movie);
       }
     });
 
-    preloadImage(image.url, image.alt);
+    preloadImage(movie.name);
   });
 }
 
 //Creates
-function createMainImage(image) {
+function createMainImage(movie) {
   displayImage.innerHTML = "";
   const mainImg = document.createElement("img");
-  mainImg.src = image.url;
-  mainImg.alt = image.alt;
+  mainImg.src = movie.imageurl;
+  mainImg.alt = movie.name;
   displayImage.appendChild(mainImg);
+
+  const movieTitle = document.getElementById("movie-title");
+  const genre = document.getElementById("genre");
+  const score = document.getElementById("score");
+
+  movieTitle.textContent = movie.name;
+  genre.textContent = movie.genre;
+  score.textContent = movie.rating;
 }
 
 async function deleteMovie(movieId) {
@@ -86,5 +100,4 @@ async function deleteMovie(movieId) {
     method: "DELETE",
   });
 }
-createThumbnail();
-createMainImage(images[0]); //sets to first image in the array
+//sets to first image in the array
