@@ -17,7 +17,7 @@ INSERT INTO movies (name, genre, imageurl, summary, rating) VALUES (?, ?, ? , ?,
 insertMessage.run(
   "Road House",
   "Action",
-  "https://en.wikipedia.org/wiki/Road_House_(2024_film)#/media/File:Road_House_2024_poster.jpg",
+  "https://assets-prd.ignimgs.com/2024/03/09/rdhs-2024-digitalonesheet-faceoff-1944x2880-pre-nodimple-pv-final-en-us-cps-1710014260812.jpg",
   "Road House is a 2024 American action film directed by Doug Liman, written by Anthony Bagarozzi and Chuck Mondry and produced by Joel Silver. It is a remake of the 1989 film of the same name and stars Jake Gyllenhaal, Daniela Melchior, Conor McGregor (in his feature film debut), J. D. Pardo, Arturo Castro and Billy Magnussen.",
   "60%"
 );
@@ -57,7 +57,7 @@ insertMessage.run(
 insertMessage.run(
   "Godzilla x Kong: The New Empire",
   "Sci-fi",
-  "https://www.dunemovie.com/assets/images/desktopbanner.jpg",
+  "https://horrorcultfilms.b-cdn.net/wp-content/uploads/2024/04/godzilla-x-kong-e1712015180332.jpg",
   "This latest entry in the Monsterverse franchise follows up the explosive showdown of Godzilla vs. Kong with an all-new cinematic adventure, pitting the almighty Kong and the fearsome Godzilla against a colossal undiscovered threat hidden within our world, challenging their very existence -- and our own. The epic new film will delve further into the histories of these Titans, their origins, and the mysteries of Skull Island and beyond, while uncovering the mythic battle that helped forge these extraordinary beings and tied them to humankind forever.",
   "54%"
 );
