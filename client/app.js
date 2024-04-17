@@ -2,6 +2,8 @@
 const thumbContainer = document.getElementById("thumb-container");
 const displayImage = document.getElementById("image-container");
 const movieWrapper = document.getElementById("movieWrapper");
+const scoreElement = document.getElementById("score"); //added for score color change
+
 const images = [
   {
     url: "https://upload.wikimedia.org/wikipedia/en/f/f5/Damsel_2024_poster2.jpg",
@@ -31,7 +33,6 @@ const images = [
 async function getMovie() {
   const response = await fetch("http://localhost:8080/movies");
   const movies = await response.json();
-  //  movieWrapper.textContent = "";
   console.log(movies);
   createThumbnail(movies);
 
@@ -52,13 +53,19 @@ function preloadImage(url) {
 
 //Creates Thumbnail
 function createThumbnail(movies) {
+  thumbContainer.textContent = "";
   movies.forEach(function (movie) {
     const img = document.createElement("img");
+    const deleteBtn = document.createElement("button");
+    const innerContainer = document.createElement("div");
+    innerContainer.classList.add("innerContainer");
+    thumbContainer.appendChild(innerContainer);
     img.src = movie.imageurl;
     img.alt = `Poster for the movie ${movie.name}`;
     img.ariaLabel = `Thumbnail of the movie poster for ${movie.name}. Click to bring up review below`;
+    img.dataset.movieId = movie.id;
     img.tabIndex = 0; // Add tabindex for accessibility
-    thumbContainer.appendChild(img);
+    innerContainer.appendChild(img);
     img.addEventListener("click", function () {
       createMainImage(movie);
       img.scrollIntoView({
@@ -74,7 +81,9 @@ function createThumbnail(movies) {
         createMainImage(movie);
       }
     });
-
+    deleteBtn.textContent = "Delete";
+    deleteBtn.addEventListener("click", () => deleteMovie(movie.id));
+    innerContainer.appendChild(deleteBtn);
     preloadImage(movie.name);
   });
 }
@@ -95,11 +104,36 @@ function createMainImage(movie) {
   movieTitle.textContent = movie.name;
   genre.textContent = movie.genre;
   score.textContent = movie.rating;
+  // changes the colour of the score
+  setColor();
 }
 
 async function deleteMovie(movieId) {
   const response = await fetch(`http://localhost:8080/moviedelete/${movieId}`, {
     method: "DELETE",
   });
+
+  getMovie();
+  console.log("deleted");
 }
 //sets to first image in the array
+
+// Function to set colour of the score based on value
+function setColor() {
+  const score = scoreElement.innerHTML;
+  const scoreNum = parseFloat(score.slice(0, -1));
+
+  let color;
+
+  if (scoreNum <= 25) {
+    color = "red";
+  } else if (scoreNum <= 50) {
+    color = "orange";
+  } else if (scoreNum <= 75) {
+    color = "yellow";
+  } else {
+    color = "green";
+  }
+
+  scoreElement.style.color = color;
+}
