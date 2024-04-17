@@ -21,6 +21,18 @@ app.get("/movies", function (request, response) {
   response.json(movies);
 });
 
+app.get("/moviesbyrating", function (request, response) {
+  // here we use .all instead of .run because we aren't INSERTing, but selecting. So we want to see ALL the results
+  const movies = db.prepare("SELECT * FROM movies ORDER BY rating DESC").all();
+  response.json(movies);
+});
+
+app.get("/genre", function (request, response) {
+  // here we use .all instead of .run because we aren't INSERTing, but selecting. So we want to see ALL the results
+  const movies = db.prepare("SELECT DISTINCT genre FROM movies;").all();
+  response.json(movies);
+});
+
 app.delete("/moviedelete/:id", function (request, response) {
   const movieId = request.params.id;
   const deleteMovie = db.prepare("DELETE FROM movies WHERE id = ?");

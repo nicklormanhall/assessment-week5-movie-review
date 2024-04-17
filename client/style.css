@@ -60,7 +60,7 @@ nav a:hover {
 
 #thumb-container img {
   width: 100px;
-  height: 150px;
+  height: 167px;
   padding: 1px;
   cursor: pointer;
   flex-shrink: 0;
@@ -105,7 +105,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   overflow: hidden;
 }
 
@@ -113,8 +113,6 @@ nav a:hover {
   width: 105%; /* change with the #main-film width */
   height: 380px;
   padding: 10px;
-
-  cursor: pointer;
 }
 
 #genre-score-container {
@@ -122,18 +120,24 @@ nav a:hover {
   /* justify-content: space-between; */
   width: 95%;
   background-color: grey;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 #genre {
   flex: 8;
-  text-align: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 0;
-  color: black;
+  padding: 3px 5%;
   font-size: small;
+  text-align: bottom;
+  color: white;
+  border: 1px solid darkblue;
+  border-radius: 20px;
+  background: linear-gradient(to right, black, rgb(62, 62, 105), black);
 }
 
 #score {
@@ -141,7 +145,6 @@ nav a:hover {
   text-align: center;
   margin: 0;
   padding: 0;
-  color: black;
   font-weight: bolder;
   font-size: larger;
   border-radius: 20px;
@@ -155,8 +158,9 @@ nav a:hover {
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 5px;
   color: black;
+  text-align: justify;
 }
 
 .innerContainer {
@@ -182,4 +186,10 @@ nav a:hover {
 .innerContainer button:focus {
   background-color: white;
   color: black;
+}
+
+#sortbyRating,
+#resetOrder {
+  color: black;
+  cursor: pointer;
 }
