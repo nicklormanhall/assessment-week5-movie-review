@@ -40,7 +40,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 150px;
+  height: 168px;
   width: auto;
   position: fixed;
   top: 80px;
@@ -49,6 +49,7 @@ nav a:hover {
   right: 20%;
   overflow: scroll;
   border: 1px solid white;
+  overflow-y: hidden;
 }
 
 #thumb-container img {
@@ -125,4 +126,29 @@ nav a:hover {
   color: black;
   font-weight: bolder;
   font-size: larger;
+}
+
+.innerContainer {
+  position: relative;
+}
+
+.innerContainer button {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.innerContainer button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.innerContainer button:focus {
+  background-color: white;
+  color: black;
 }
