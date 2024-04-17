@@ -2,6 +2,11 @@
   font-family: "Arial Narrow", sans-serif;
   color: white;
 }
+
+html {
+  margin: 0;
+}
+
 body {
   background: linear-gradient(to right, black, rgb(80, 71, 71), black);
   color: white;
@@ -15,6 +20,7 @@ header {
   align-content: center;
   z-index: 1;
   white-space: nowrap;
+  margin: 0%;
 }
 
 nav {
@@ -78,6 +84,7 @@ nav a:hover {
   background-color: black;
   border-radius: 10px;
   background-color: grey;
+  padding: 0;
 }
 
 #title-container {
@@ -105,24 +112,48 @@ nav a:hover {
   width: 105%; /* change with the #main-film width */
   height: 380px;
   padding: 10px;
+
   cursor: pointer;
 }
 
 #genre-score-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  /* justify-content: space-between; */
+  width: 95%;
   background-color: grey;
   margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#genre,
+#genre {
+  flex: 8;
+  text-align: wrap;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: small;
+}
+
 #score {
-  flex: 1;
+  flex: 2;
   text-align: center;
   margin: 0;
   padding: 0;
   color: black;
   font-weight: bolder;
   font-size: larger;
+  border-radius: 20px;
+  padding: 2px 0%;
+  /* background-color: #4caf50; */
+}
+
+#summary {
+  font-size: 12px;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: black;
 }

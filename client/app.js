@@ -2,6 +2,8 @@
 const thumbContainer = document.getElementById("thumb-container");
 const displayImage = document.getElementById("image-container");
 const movieWrapper = document.getElementById("movieWrapper");
+const scoreElement = document.getElementById("score"); //added for score color change
+
 const images = [
   {
     url: "https://upload.wikimedia.org/wikipedia/en/f/f5/Damsel_2024_poster2.jpg",
@@ -93,6 +95,8 @@ function createMainImage(movie) {
   movieTitle.textContent = movie.name;
   genre.textContent = movie.genre;
   score.textContent = movie.rating;
+  // changes the colour of the score
+  setColor();
 }
 
 async function deleteMovie(movieId) {
@@ -101,3 +105,23 @@ async function deleteMovie(movieId) {
   });
 }
 //sets to first image in the array
+
+// Function to set colour of the score based on value
+function setColor() {
+  const score = scoreElement.innerHTML;
+  const scoreNum = parseFloat(score.slice(0, -1));
+
+  let color;
+
+  if (scoreNum <= 25) {
+    color = "red";
+  } else if (scoreNum <= 50) {
+    color = "orange";
+  } else if (scoreNum <= 75) {
+    color = "yellow";
+  } else {
+    color = "green";
+  }
+
+  scoreElement.style.color = color;
+}
