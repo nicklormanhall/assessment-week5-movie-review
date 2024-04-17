@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Movies 2024</h1>
+      <h2>Do you have a movie you'd like us to include? Let us know!</h2>
+    </header>
+    <form id="movieReviewForm">
+      <div class="form-group-labels">
+        <div class="form-group">
+          <label for="movieTitle">Movie Title:</label>
+          <input
+            type="text"
+            id="movieTitle"
+            name="movieTitle"
+            placeholder="Movie name here"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="genre">Genre:</label>
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            placeholder="Genre here"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="imageUrl">Image URL:</label>
+          <input
+            type="url"
+            id="imageUrl"
+            name="imageUrl"
+            placeholder="Enter the URl of an image you'd like us to use"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="summary">Movie Summary:</label>
+          <textarea
+            id="summary"
+            name="summary"
+            rows="4"
+            placeholder="Enter a short summary here"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+            placeholder="Rate here"
+          />
+        </div>
+      </div>
+
+      <h2>Your Details</h2>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="enter your email address here"
+        />
+      </div>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
