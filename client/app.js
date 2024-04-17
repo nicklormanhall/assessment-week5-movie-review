@@ -61,7 +61,8 @@ function createThumbnail(movies) {
     innerContainer.classList.add("innerContainer");
     thumbContainer.appendChild(innerContainer);
     img.src = movie.imageurl;
-    img.alt = movie.name;
+    img.alt = `Poster for the movie ${movie.name}`;
+    img.ariaLabel = `Thumbnail of the movie poster for ${movie.name}. Click to bring up review below`;
     img.dataset.movieId = movie.id;
     img.tabIndex = 0; // Add tabindex for accessibility
     innerContainer.appendChild(img);
@@ -92,7 +93,8 @@ function createMainImage(movie) {
   displayImage.innerHTML = "";
   const mainImg = document.createElement("img");
   mainImg.src = movie.imageurl;
-  mainImg.alt = movie.name;
+  mainImg.alt = `Poster for the movie ${movie.name}`;
+  mainImg.ariaLabel = `Poster for the movie ${movie.name}`;
   displayImage.appendChild(mainImg);
 
   const movieTitle = document.getElementById("movie-title");
