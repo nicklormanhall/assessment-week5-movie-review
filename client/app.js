@@ -31,7 +31,6 @@ const images = [
 async function getMovie() {
   const response = await fetch("http://localhost:8080/movies");
   const movies = await response.json();
-  //  movieWrapper.textContent = "";
   console.log(movies);
   createThumbnail(movies);
 
@@ -52,12 +51,18 @@ function preloadImage(url) {
 
 //Creates Thumbnail
 function createThumbnail(movies) {
+  thumbContainer.textContent = "";
   movies.forEach(function (movie) {
     const img = document.createElement("img");
+    const deleteBtn = document.createElement("button");
+    const innerContainer = document.createElement("div");
+    innerContainer.classList.add("innerContainer");
+    thumbContainer.appendChild(innerContainer);
     img.src = movie.imageurl;
     img.alt = movie.name;
+    img.dataset.movieId = movie.id;
     img.tabIndex = 0; // Add tabindex for accessibility
-    thumbContainer.appendChild(img);
+    innerContainer.appendChild(img);
     img.addEventListener("click", function () {
       createMainImage(movie);
       img.scrollIntoView({
@@ -73,7 +78,9 @@ function createThumbnail(movies) {
         createMainImage(movie);
       }
     });
-
+    deleteBtn.textContent = "Delete";
+    deleteBtn.addEventListener("click", () => deleteMovie(movie.id));
+    innerContainer.appendChild(deleteBtn);
     preloadImage(movie.name);
   });
 }
@@ -99,5 +106,8 @@ async function deleteMovie(movieId) {
   const response = await fetch(`http://localhost:8080/moviedelete/${movieId}`, {
     method: "DELETE",
   });
+
+  getMovie();
+  console.log("deleted");
 }
 //sets to first image in the array
