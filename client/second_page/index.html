@@ -21,6 +21,7 @@
             id="movieTitle"
             name="movieTitle"
             placeholder="Movie name here"
+            aria-label="Type in movie name here"
           />
         </div>
 
@@ -32,6 +33,7 @@
             name="genre"
             placeholder="Genre here"
             required
+            aria-label="Type in movie genre here"
           />
         </div>
 
@@ -42,6 +44,7 @@
             id="imageUrl"
             name="imageUrl"
             placeholder="Enter the URl of an image you'd like us to use"
+            aria-label="Enter the URl of an image you'd like us to use"
           />
         </div>
 
@@ -52,6 +55,7 @@
             name="summary"
             rows="4"
             placeholder="Enter a short summary here"
+            aria-label="Enter a short summary here"
           ></textarea>
         </div>
 
@@ -63,7 +67,8 @@
             name="rating"
             min="1"
             max="10"
-            placeholder="Rate here"
+            placeholder="Add in the Rotten Tomatoes score here"
+            aria-label="Add in the Rotten Tomatoes score here"
           />
         </div>
       </div>
@@ -76,8 +81,9 @@
           type="text"
           id="name"
           name="name"
-          placeholder="Enter your email"
+          placeholder="Enter your name"
           required
+          aria-label="Enter your name"
         />
       </div>
 
@@ -89,10 +95,11 @@
           name="email"
           required
           placeholder="enter your email address here"
+          aria-label="enter your email address here"
         />
       </div>
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" for="movieReviewForm" />
     </form>
   </body>
 </html>

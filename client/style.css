@@ -23,6 +23,10 @@ header {
   margin: 0%;
 }
 
+h1 {
+  margin-right: 21px;
+}
+
 nav {
   display: flex;
   gap: 30px;
@@ -39,8 +43,40 @@ nav a:hover {
   color: rgb(149, 139, 134);
 }
 
-#movie-container {
+#flexcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+/* -------------media queries section------------- */
+@media (max-width: 480px) {
+  #flexcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin-right: 21px;
+    margin-bottom: 0;
+  }
+
+  #thumb-container img {
+    width: auto;
+    height: 100px;
+    padding: 1px;
+    cursor: pointer;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  #main-film {
+    width: 100vw;
+    height: auto;
+  }
+}
+/* -----------end of media queries section----------- */
 
 #thumb-container {
   display: flex;
