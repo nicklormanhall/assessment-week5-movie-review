@@ -9,6 +9,7 @@ async function handleSubmit(event) {
   const imageUrl = document.getElementById("imageUrl").value;
   const summary = document.getElementById("summary").value;
   const rating = document.getElementById("rating").value;
+  const platform = document.getElementById("platform").value;
 
   if (movieTitle.trim() === "") {
     alert("Please enter a movie title.");
@@ -21,6 +22,7 @@ async function handleSubmit(event) {
     imageUrl: imageUrl,
     summary: summary,
     rating: rating,
+    platform: platform,
   };
 
   const addmovie = await fetch("http://localhost:8080/movieadd", {
