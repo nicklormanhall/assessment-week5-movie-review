@@ -22,12 +22,12 @@ app.get("/movies", function (request, response) {
 });
 
 app.post("/movieadd", function (request, response) {
-  const { name, genre, imageUrl, summary, rating } = request.body;
+  const { name, genre, imageUrl, summary, rating, platform } = request.body;
   const ratingpercent = rating + "%";
   const insertStatement = db.prepare(
-    "INSERT INTO movies (name, genre, imageUrl, summary, rating) VALUES (?, ?, ?, ?, ?)"
+    "INSERT INTO movies (name, genre, imageUrl, summary, rating, platform) VALUES (?, ?, ?, ?, ?, ?)"
   );
-  insertStatement.run(name, genre, imageUrl, summary, ratingpercent);
+  insertStatement.run(name, genre, imageUrl, summary, ratingpercent, platform);
   response.json("success");
   console.log("success");
 });
