@@ -117,12 +117,16 @@ function createMainImage(movie) {
   const genre = document.getElementById("genre");
   const score = document.getElementById("score");
   const summary = document.getElementById("summary");
+  //added for platform e.g NETFLIX
+  const platform = document.getElementById("platform");
 
   movieTitle.textContent = movie.name;
   genre.textContent = movie.genre;
   score.textContent = movie.rating;
   summary.textContent = movie.summary;
   // changes the colour of the score
+  platform.textContent = movie.platform;
+
   setColor();
 }
 
