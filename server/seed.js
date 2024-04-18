@@ -57,7 +57,7 @@ insertMessage.run(
   "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg",
   "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the universe, he must prevent a terrible future only he can foresee.",
   "93%",
-  "Prime Video, Apple TV, Fandango at Home, In Theaters"
+  "Prime Video"
 );
 
 insertMessage.run(
@@ -66,7 +66,7 @@ insertMessage.run(
   "https://horrorcultfilms.b-cdn.net/wp-content/uploads/2024/04/godzilla-x-kong-e1712015180332.jpg",
   "This latest entry in the Monsterverse franchise follows up the explosive showdown of Godzilla vs. Kong with an all-new cinematic adventure, pitting the almighty Kong and the fearsome Godzilla against a colossal undiscovered threat hidden within our world, challenging their very existence -- and our own. The epic new film will delve further into the histories of these Titans, their origins, and the mysteries of Skull Island and beyond, while uncovering the mythic battle that helped forge these extraordinary beings and tied them to humankind forever.",
   "54%",
-  "Fandango at Home, In Theaters"
+  "Fandango at Home"
 );
 
 insertMessage.run(
@@ -75,7 +75,7 @@ insertMessage.run(
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHRtR5BrfdQV_PJ63qemCTaEnmHAvpIBi4MUd7QRVHiQ&s",
   "Broke and depressed, Ray (John Magaro) is mistaken for a dangerous hitman and given an envelope of cash. Along with his P.I. friend Skip (Steve Zahn), he must escape the actual hitman to make it out of LaRoy alive. ",
   "99%",
-  "Prime Video, Apple TV, Fandango at Home, In Theaters"
+  "Prime Video"
 );
 
 insertMessage.run(
@@ -84,7 +84,7 @@ insertMessage.run(
   "https://www.tvguide.com/a/img/catalog/provider/1/2/1-14178007973.jpg",
   "A young man ekes out a meager living in an underground fight club where, night after night, wearing a gorilla mask, he's beaten bloody by more popular fighters for cash. After years of suppressed rage, he discovers a way to infiltrate the enclave of the city's sinister elite. As his childhood trauma boils over, his mysteriously scarred hands unleash an explosive campaign of retribution to settle the score with the men who took everything from him.",
   "89%",
-  "Fandango at Home, In Theaters"
+  "Fandango at Home"
 );
 
 insertMessage.run(
@@ -93,7 +93,7 @@ insertMessage.run(
   "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
   "Po must train a new warrior when he's chosen to become the spiritual leader of the Valley of Peace. However, when a powerful shape-shifting sorceress sets her eyes on his Staff of Wisdom, he suddenly realizes he's going to need some help. Teaming up with a quick-witted corsac fox, Po soon discovers that heroes can be found in the most unexpected places.",
   "72%",
-  "Prime Video, Apple TV, Fandango at Home, In Theaters"
+  "Prime Video"
 );
 
 insertMessage.run(
@@ -102,7 +102,7 @@ insertMessage.run(
   "https://upload.wikimedia.org/wikipedia/en/f/f7/The_Monk_and_the_Gun_poster.jpg",
   "An American travels to Bhutan in search of treasure and crosses paths with a young monk wandering the serene mountains and instructed by his teacher to make things right.",
   "92%",
-  "Prime Video, Apple TV, Fandango at Home"
+  "Prime Video"
 );
 
 insertMessage.run(
@@ -111,7 +111,7 @@ insertMessage.run(
   "https://upload.wikimedia.org/wikipedia/en/3/31/Ghostbusters_(2024)_poster.jpg",
   "In Ghostbusters: Frozen Empire, the Spengler family returns to where it all started -- the iconic New York City firehouse -- to team up with the original Ghostbusters, who've developed a top-secret research lab to take busting ghosts to the next level. But when the discovery of an ancient artifact unleashes an evil force, Ghostbusters new and old must join forces to protect their home and save the world from a second Ice Age.",
   "43%",
-  "Fandango at Home, In Theaters"
+  "Fandango at Home"
 );
 
 insertMessage.run(
@@ -138,7 +138,7 @@ insertMessage.run(
   "https://m.media-amazon.com/images/M/MV5BNGU1OTFhMmItNDcyMS00ODEyLWE4NmQtMjFhZjExNmU1OTQ4XkEyXkFqcGdeQXVyMTM1NjM2ODg1._V1_QL75_UX190_CR0,0,190,281_.jpg",
   "Sir Nicholas 'Nicky' Winton, a young London broker who, in the months leading up to World War II, rescued over 600 children from Nazi-occupied Czechoslovakia.",
   "90%",
-  "Prime Video, Apple TV, Fandango at Home, In Theaters"
+  "Prime Video"
 );
 
 insertMessage.run(
@@ -147,7 +147,7 @@ insertMessage.run(
   "https://m.media-amazon.com/images/M/MV5BNGIyYWMzNjktNDE3MC00YWQyLWEyMmEtN2ZmNzZhZDk3NGJlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
   "From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.",
   "92%",
-  "Prime Video, Apple TV, Hulu, Fandango at Home, In Theaters"
+  "Prime Video"
 );
 
 insertMessage.run(
