@@ -12,11 +12,14 @@ body {
   color: white;
 }
 
+/* -------------START HEADER SECTION------------- */
+
+/* Header (Title,movies, reset, sort and add*/
 header {
   position: fixed;
   display: flex;
-  padding: 5px 5px;
-  gap: 100px;
+  padding: 2px 2px;
+  gap: 20px;
   align-content: center;
   z-index: 1;
   white-space: nowrap;
@@ -25,7 +28,7 @@ header {
 
 nav {
   display: flex;
-  gap: 30px;
+  gap: 5px;
   align-items: center;
   position: relative;
 }
@@ -42,6 +45,10 @@ nav a:hover {
 h1 {
   margin-right: 21px;
 }
+
+/* -------------END HEADER SECTION------------- */
+
+/* -------------START THUMBNAIL SECTION------------- */
 
 #thumb-container {
   display: flex;
@@ -60,7 +67,8 @@ h1 {
 }
 
 #thumb-container img {
-  width: 100px;
+  /* width: 100px; */
+  width: auto;
   height: 167px;
   padding: 1px;
   /* cursor: pointer; */
@@ -69,34 +77,33 @@ h1 {
   align-items: center;
 }
 
-/* -------------media queries section------------- */
-@media (max-width: 480px) {
-  #flexcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  h1 {
-    margin-right: 21px;
-    margin-bottom: 0;
-  }
-
-  #thumb-container img {
-    width: auto;
-    height: 100px;
-    padding: 1px;
-    cursor: pointer;
-    flex-shrink: 0;
-    align-items: center;
-  }
-
-  #main-film {
-    width: 100vw;
-    height: auto;
-  }
+.innerContainer {
+  position: relative;
 }
-/* -----------end of media queries section----------- */
+
+.innerContainer button {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.innerContainer button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.innerContainer button:focus {
+  background-color: white;
+  color: black;
+}
+/* -------------END THUMBNAIL SECTION------------- */
+
+/* -------------START MAIN FILM SECTION------------- */
 
 #main-film {
   display: flex;
@@ -206,6 +213,8 @@ h1 {
   /* background-color: #4caf50; */
 }
 
+/* -------------END MAIN FILM SECTION------------- */
+
 #sortbyRating,
 #resetOrder,
 #platform {
@@ -213,27 +222,36 @@ h1 {
   cursor: pointer;
 }
 
-.innerContainer {
-  position: relative;
-}
+/* -------------media queries section------------- */
+@media (max-width: 480px) {
+  #thumb-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100px;
+    width: auto;
+    position: fixed;
+    top: 80px;
+    bottom: auto;
+    left: 2%;
+    right: 2%;
+    overflow: scroll;
+    border: 1px solid white;
+    overflow-y: hidden;
+  }
 
-.innerContainer button {
-  position: absolute;
-  bottom: 6px;
-  right: 0;
-  background-color: black;
-  color: white;
-  border: 1px solid white;
-  border-radius: 20px;
-}
+  #thumb-container img {
+    width: auto;
+    height: 100px;
+    padding: 1px;
+    cursor: url("./assets/Camera.png"), pointer;
+    flex-shrink: 0;
+    align-items: center;
+  }
 
-.innerContainer button:hover {
-  cursor: pointer;
-  background-color: white;
-  color: black;
+  #main-film {
+    height: auto;
+    top: 200px;
+  }
 }
-
-.innerContainer button:focus {
-  background-color: white;
-  color: black;
-}
+/* -----------end of media queries section----------- */
