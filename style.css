@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  padding-left: 30px;
+  text-align: center;
 }
 h2 {
   text-align: center;
@@ -73,23 +73,29 @@ input[type="submit"]:hover {
 }
 
 /* media queries */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 24px;
-  }
-
+@media (max-width: 600px) {
   form {
     padding: 20px;
+  }
+
+  .form-group-labels {
+    padding: 10px;
   }
 
   .form-group label {
     flex-basis: 100%;
     text-align: left;
+    margin-bottom: 10px;
   }
 
   .form-group input,
   .form-group textarea {
     flex-basis: 100%;
-    padding: 8px;
+  }
+}
+
+@media (max-width: 1400px) {
+  form {
+    max-width: 600px;
   }
 }
