@@ -62,7 +62,8 @@ nav a:hover {
   width: 100px;
   height: 167px;
   padding: 1px;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: url("./assets/Camera.png"), pointer;
   flex-shrink: 0;
   align-items: center;
 }
