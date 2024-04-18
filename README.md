@@ -53,21 +53,28 @@ We discussed actions and allocated to individuals
 
 MVP
 
-Thumbnail image of movies scroll
-Movie page is displayed at the bottom when a thumbnail is clicked
+✅ Thumbnail image of movies scroll
+✅ Movie page is displayed at the bottom when a thumbnail is clicked
 movie shows with movie summary, rotten tomato score and genre
-Minimum of 20 movies in our list, with movie summary, rotten tomato score and genre
-2nd page allow a user to add their own movie, this is then to appear on the main page
-Ability to sort by score
+✅ Minimum of 20 movies in our list, with movie summary, rotten tomato score and genre
+✅ 2nd page allow a user to add their own movie, this is then to appear on the main page
+✅ Ability to sort by score
 
 STRETCH GOALS
 
-Ability to filter by genre
-Add ability to comment or add a star rating on the existing movies
-Add ability to delete a movie or comment
-Use of movies API to retrieve additional titles
-Change the colour of the font/background based on the % based on the Rotten Tomatoes
-Ability to sort by Rotten Tomatoes rating into a numbered list showing ‘# of 20’ at the top of the page.
-Add arrow keys to switch through movies
-Add more movies
-Add trailer video
+COMPLETED
+
+✅ Add ability to delete a movie or comment
+✅ Change the colour of the font/background based on the % based on the Rotten Tomatoes
+✅ Add platform information
+
+NOT COMPLETED
+
+❌ Ability to filter by genre
+❌ Add ability to comment or add a star rating on the existing movies
+❌ Use of movies API to retrieve additional titles
+❌ Ability to sort by Rotten Tomatoes rating into a numbered list showing ‘# of 20’ at the top of the page.
+❌ Add arrow keys to switch through movies
+❌ Add trailer video
+
+CHALLENGES
