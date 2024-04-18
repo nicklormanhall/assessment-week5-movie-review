@@ -6,6 +6,7 @@ const scoreElement = document.getElementById("score"); //added for score color c
 const sortbyRating = document.getElementById("sortbyRating");
 const resetOrder = document.getElementById("resetOrder");
 
+//inital images added to test thumbnails
 const images = [
   {
     url: "https://upload.wikimedia.org/wikipedia/en/f/f5/Damsel_2024_poster2.jpg",
@@ -46,6 +47,7 @@ async function getMovie() {
 
 getMovie();
 
+//get the movies in order of the rott
 async function getMovieRating() {
   const response = await fetch("http://localhost:8080/moviesbyrating");
   const movies = await response.json();
@@ -102,7 +104,7 @@ function createThumbnail(movies) {
   });
 }
 
-//Creates
+//Creates main image and adds to the front screen
 function createMainImage(movie) {
   displayImage.innerHTML = "";
   const mainImg = document.createElement("img");
@@ -134,7 +136,8 @@ async function deleteMovie(movieId) {
 }
 //sets to first image in the array
 
-// Function to set colour of the score based on value
+// Function to set colour of the rating score on the main image based on value of the rotten tomotes rating
+
 function setColor() {
   const score = scoreElement.innerHTML;
   const scoreNum = parseFloat(score.slice(0, -1));
@@ -154,10 +157,11 @@ function setColor() {
   scoreElement.style.color = color;
 }
 
+// orders the images based on the rotten tomotes score when the button is clicked
 sortbyRating.addEventListener("click", function () {
   getMovieRating();
 });
-
+// Order based on the standard database insert when the button is clicked
 resetOrder.addEventListener("click", function () {
   getMovie();
 });
