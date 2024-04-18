@@ -21,6 +21,17 @@ app.get("/movies", function (request, response) {
   response.json(movies);
 });
 
+app.post("/movieadd", function (request, response) {
+  const { name, genre, imageUrl, summary, rating } = request.body;
+  const ratingpercent = rating + "%";
+  const insertStatement = db.prepare(
+    "INSERT INTO movies (name, genre, imageUrl, summary, rating) VALUES (?, ?, ?, ?, ?)"
+  );
+  insertStatement.run(name, genre, imageUrl, summary, ratingpercent);
+  response.json("success");
+  console.log("success");
+});
+
 app.get("/moviesbyrating", function (request, response) {
   // here we use .all instead of .run because we aren't INSERTing, but selecting. So we want to see ALL the results
   const movies = db.prepare("SELECT * FROM movies ORDER BY rating DESC").all();

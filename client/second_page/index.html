@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./second_page/app.js" defer></script>
-    <link rel="stylesheet" href="./second_page/style.css" />
-    <title>Document</title>
+    <meta name="description" content="Add movies to our database!" />
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Add a movie!</title>
   </head>
   <body>
     <header>
-      <h1>Movies 2024</h1>
+      <a href="../index.html"><h1>Movies 2024</h1></a>
       <h2>Do you have a movie you'd like us to include? Let us know!</h2>
     </header>
     <form id="movieReviewForm">
@@ -62,7 +63,7 @@
             id="rating"
             name="rating"
             min="1"
-            max="10"
+            max="100"
             placeholder="Rate here"
           />
         </div>
