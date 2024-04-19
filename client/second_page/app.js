@@ -25,13 +25,17 @@ async function handleSubmit(event) {
     platform: platform,
   };
 
-  const addmovie = await fetch("http://localhost:8080/movieadd", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formValues),
-  });
+  // const addmovie = await fetch("http://localhost:8080/movieadd", {
+  const addmovie = await fetch(
+    "https://assessment-week5-movie-review.onrender.com/movieadd",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    }
+  );
   console.log("Form submitted successfully!");
   form.reset();
 }
