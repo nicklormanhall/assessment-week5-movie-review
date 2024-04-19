@@ -35,7 +35,9 @@ const images = [
 ];
 
 async function getMovie() {
-  const response = await fetch("http://localhost:8080/movies");
+  const response = await fetch(
+    "https://assessment-week5-movie-review.onrender.com/movies"
+  );
   const movies = await response.json();
   console.log(movies);
   createThumbnail(movies);
@@ -49,7 +51,9 @@ getMovie();
 
 //get the movies in order of the rott
 async function getMovieRating() {
-  const response = await fetch("http://localhost:8080/moviesbyrating");
+  const response = await fetch(
+    "https://assessment-week5-movie-review.onrender.com/moviesbyrating"
+  );
   const movies = await response.json();
   console.log(movies);
   createThumbnail(movies);
@@ -131,9 +135,12 @@ function createMainImage(movie) {
 }
 
 async function deleteMovie(movieId) {
-  const response = await fetch(`http://localhost:8080/moviedelete/${movieId}`, {
-    method: "DELETE",
-  });
+  const response = await fetch(
+    `https://assessment-week5-movie-review.onrender.com/moviedelete/${movieId}`,
+    {
+      method: "DELETE",
+    }
+  );
 
   getMovie();
   console.log("deleted");
